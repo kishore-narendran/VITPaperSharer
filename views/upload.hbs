@@ -6,7 +6,7 @@
     <body>
         <form id="upload-form" action="/uploadpaper" method="post" enctype="multipart/form-data">
             <label>Class Number</label><br>
-            <input type="number" name="class_number"><br>
+            <input type="number" name="class_number" min="1000" max="9999"><br>
             <label>Title</label><br>
             <input type="text" name="title"><br>
             <label>Course Code</label><br>
@@ -28,6 +28,17 @@
                 <option value="G1">G1</option>
                 <option value="G2">G2</option>
             </select>
+            <br>
+            <label>Semester</label><br>
+            <select name="semester">
+                <option value="FS">Fall Semester</option>
+                <option value="WS">Winter Semester</option>
+                <option value="SS">Summer Semester</option>
+                <option value="IS">Inter Semester</option>
+            </select>
+            <br>
+            <label>Year</label><br>
+            <input type="number" name="year" min="1990" max="2025">
             <br>
             <label>File 1:</label><br>
             <input type="file" class="file-upload" name="file1"/>
