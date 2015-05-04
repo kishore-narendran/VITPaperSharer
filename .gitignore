@@ -30,4 +30,4 @@ node_modules/
 .lock-wscript
 
 public/uploads
-public
+public/generated
