@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <form id="upload-form" action="/uploadpaper" method="post" enctype="multipart/form-data">
+            <label>Class Number</label><br>
+            <input type="number" name="class_number"><br>
+            <label>Title</label><br>
+            <input type="text" name="title"><br>
+            <label>Course Code</label><br>
+            <input type="text" name="code"><br>
+            <label>Slot</label><br>
+            <select name="slot">
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+                <option value="D1">D1</option>
+                <option value="D2">D2</option>
+                <option value="E1">E1</option>
+                <option value="E2">E2</option>
+                <option value="F1">F1</option>
+                <option value="F2">F2</option>
+                <option value="G1">G1</option>
+                <option value="G2">G2</option>
+            </select>
+            <br>
+            <label>File 1:</label><br>
+            <input type="file" class="file-upload" name="file1"/>
+            <br><input type="button" id="add-file" value="Add File">
+            <input type="submit" value="Submit">
+            <input type="hidden" name="number_of_files" class="number-of-files" value="1">
+        </form>
+        <script src="javascripts/script.js"></script>
+    </body>
+</html>
