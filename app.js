@@ -11,7 +11,7 @@ var os = require('os');
 var path = require('path');
 
 var web = require('./routes/web');
-
+var api = require('./routes/api')
 var app = express();
 
 // view engine setup
@@ -75,6 +75,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', web);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
